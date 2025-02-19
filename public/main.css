@@ -1,0 +1,395 @@
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #121212 0%, #1e1e1e 100%);
+  color: #e0e0e0;
+  text-align: center;
+  line-height: 1.6;
+  transition: background 0.3s;
+}
+
+body:hover {
+  background: linear-gradient(135deg, #1e1e1e 0%, #121212 100%);
+}
+
+header {
+  background: url('assets/bannerrr.png') no-repeat center center/cover;
+  padding: 100px 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+  position: relative;
+  color: #46c406;
+  overflow: hidden;
+}
+
+header::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+h1 {
+  font-size: 4.5em;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  position: relative;
+  z-index: 2;
+  animation: fadeInDown 1s ease-in-out;
+}
+
+header p {
+  font-size: 1.5em;
+  margin-top: 10px;
+  z-index: 2;
+  position: relative;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+  animation: fadeInUp 1s ease-in-out;
+}
+
+nav {
+  margin-top: 20px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+nav a {
+  color: #f0f0f0;
+  text-decoration: none;
+  font-weight: bold;
+  display: block;
+  padding: 10px 20px;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #fd712b;
+}
+
+main {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #1e1e1e;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+main:hover {
+  transform: translateY(-5px);
+  background-color: #2a2a2a;
+}
+
+section {
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #2E2E2E;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  transition: background-color 0.3s, transform 0.3s;
+  width: 800px;
+}
+
+section:hover {
+  background-color: #3E3E3E;
+  transform: translateY(-5px);
+}
+
+h2 {
+  color: #46c406;
+  margin-bottom: 15px;
+  font-size: 2.5em;
+  position: relative;
+  animation: fadeInLeft 1s ease-in-out;
+  font-family: 'Bruno Ace SC', sans-serif;
+}
+
+h2::after {
+  content: '';
+  display: block;
+  height: 2px;
+  width: 50px;
+  background: #46c406;
+  margin: 10px auto;
+  border-radius: 5px;
+}
+
+.about p, .contact p {
+  font-size: 1.2em;
+  line-height: 1.8;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.skill {
+  background-color: #46c406;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin: 5px;
+  transition: transform 0.3s, background-color 0.3s;
+  display: flex;
+  align-items: center;
+}
+
+.skill i {
+  margin-right: 10px;
+}
+
+.skill:hover {
+  transform: scale(1.1);
+  background-color: #A44CD0;
+}
+
+.experience-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  text-align: left;
+  margin-top: 10px;
+  gap: 10px;
+}
+
+.experience-item {
+  background-color: #3E3E3E;
+  padding: 15px;
+  border-radius: 5px;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.experience-item:hover {
+  transform: scale(1.05);
+  background-color: #4E4E4E;
+}
+
+footer {
+  margin-top: 40px;
+  font-size: 0.9em;
+  color: #888;
+  padding: 10px 0;
+  border-top: 1px solid #444;
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+footer p {
+  margin: 0;
+}
+
+a {
+  color: #46c406;
+  text-decoration: none;
+  transition: color 0.3s;
+  font-family: 'Bruno Ace SC', sans-serif;
+}
+
+a:hover {
+  color: #46c406;
+}
+
+.discord-profile {
+  margin: 20px 0;
+}
+
+.discord-profile img {
+  border-radius: 8px;
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+  transition: transform 0.3s;
+}
+
+.discord-profile img:hover {
+  transform: scale(1.05);
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.menu-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.menu-toggle .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #f0f0f0;
+  margin: 4px 0;
+  transition: 0.4s;
+}
+
+.menu-toggle.active .bar:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.menu-toggle.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active .bar:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 500px;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease-in-out;
+  transform: translateX(100%);
+  z-index: 2;
+}
+
+.menu.active {
+  display: block;
+  transform: translateX(0);
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu ul li {
+  margin: 20px 0;
+}
+
+.menu ul li a {
+  color: #f0f0f0;
+  text-decoration: none;
+  font-weight: bold;
+  display: block;
+  padding: 15px 20px;
+  transition: color 0.3s ease, transform 0.3s ease;
+  font-family: 'Bruno Ace SC', sans-serif;
+  position: relative;
+}
+
+.menu ul li a::before {
+  content: '-';
+  margin-right: 10px;
+}
+
+.menu ul li a:hover {
+  color: #46c406;
+  transform: scale(1.1);
+}
+
+.menu ul li a:hover::after {
+  content: '';
+  display: block;
+  width: calc(100% - 30px);
+  height: 2px;
+  background-color: #46c406;
+  position: absolute;
+  bottom: 0;
+  left: 15px;
+}
+
+.separator {
+  height: 2px;
+  background: linear-gradient(135deg, #52659f, #6a7fbf);
+  margin: 20px 0;
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  background: #1a1a1a;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.skill-card {
+  background: linear-gradient(135deg, #52659f, #6a7fbf);
+  color: #f0f0f0;
+  padding: 20px;
+  margin: 10px 0;
+  border-radius: 8px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: calc(100% - 40px);
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+#about,
+#skills,
+#projects,
+#contact,
+#future {
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
