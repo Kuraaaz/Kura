@@ -4,57 +4,172 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>!" Kura - Développeur Full Stack</title>
+  <link rel="icon" href="https://cdn.discordapp.com/attachments/1046835513144901792/1343221802448715857/66432032c92d5798e234a05aa2bc8241.jpg?ex=67bc7c49&is=67bb2ac9&hm=09c6430e26404acdb19f985f0b1be2406bdc8df1e6dc99bd52777fe4619d7cc0&" type="image/png">
   <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="rs.css">
   <script src="index.js" defer></script>
 </head>
 <body>
   <header>
-    <h1>!" Kura</h1>
+    <h1 class="titre-points">!" Kura</h1>
     <p>Développeur passionné par la technologie et les jeux.</p>
-    <div class="menu-toggle">
-      <div class="bar"></div>
-      <div class="bar"></div>
-      <div class="bar"></div>
-    </div>
   </header>
-  <nav class="menu">
-    <ul>
-      <li><a href="#about">À propos</a></li>
-      <li><a href="#skills">Compétences</a></li>
-      <li><a href="#projects">Projets</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li><a href="#future">Avenir</a></li>
-    </ul>
-  </nav>
+   
+  <section id="first">
+    <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&pause=1000&color=960018&center=true&width=470&lines=!%22+Kura%2C+D%C3%A9veloppeur+Full+Stack" alt="Typing SVG" />
+    <div id="discord-info" class="discord-info">
+      <div class="discord-avatar-container">
+        <img id="discord-avatar" src="" alt="Discord Avatar" class="discord-avatar">
+        <div id="discord-status" class="discord-status"></div>
+      </div>
+      <div class="discord-details">
+        <div class="discord-username-banner">
+          <p id="discord-username" class="discord-username"></p>
+          <img src="/assets/discord-banner.png" alt="Discord Banner" class="discord-banner">
+        </div>
+        <div id="discord-activity" class="discord-activity"></div>
+        <div id="discord-activities" class="discord-activities"></div>
+      </div>
+    </div>
+  </section>
   
+
   <section id="hero">
-    <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=39F729&background=5D47FF00&width=442&lines=!%22+Kura%2C+d%C3%A9veloppeur+full+Stack" alt="Typing SVG" />
     <h2>Bienvenue !</h2>
     <p>Je suis Kura, développeur full stack passionné d'informatique.</p>
+    <br>
+    <a href="https://discord.com/users/1046834138583412856" target="_blank" class="discord-button">
+      <svg class="discord-icon" xmlns="http://www.w3.org/2000/svg" width="3em" height="3em" viewBox="1.96 4.26 20.03 15.53">
+        <defs>
+          <!-- Filtre pour la lueur rouge par défaut -->
+          <filter id="red-glow" x="-50%" y="-50%" width="200%" height="200%">
+            <!-- Appliquer une couleur rouge comme lueur -->
+            <feFlood flood-color="rgba(150, 0, 24, 1)" result="red" />
+            <feComposite in="red" in2="SourceAlpha" operator="in" result="composite1" />
+            <feGaussianBlur in="composite1" stdDeviation="3.5" result="blurred" />
+            <feMerge>
+              <feMergeNode in="blurred" />
+              <feMergeNode in="SourceGraphic" />
+            </feMerge>
+          </filter>
+    
+          <!-- Filtre pour la lueur blanche au survol -->
+          <filter id="white-glow" x="-50%" y="-50%" width="200%" height="200%">
+            <!-- Appliquer une couleur blanche comme lueur -->
+            <feFlood flood-color="rgba(255, 255, 255, 1)" result="white" />
+            <feComposite in="white" in2="SourceAlpha" operator="in" result="composite2" />
+            <feGaussianBlur in="composite2" stdDeviation="5" result="blurred" />
+            <feMerge>
+              <feMergeNode in="blurred" />
+              <feMergeNode in="SourceGraphic" />
+            </feMerge>
+          </filter>
+        </defs>
+        <path fill="currentColor" d="M14.82 4.26a10.14 10.14 0 0 0-.53 1.1a14.66 14.66 0 0 0-4.58 0a10.14 10.14 0 0 0-.53-1.1a16 16 0 0 0-4.13 1.3a17.33 17.33 0 0 0-3 11.59a16.6 16.6 0 0 0 5.07 2.59A12.89 12.89 0 0 0 8.23 18a9.65 9.65 0 0 1-1.71-.83a3.39 3.39 0 0 0 .42-.33a11.66 11.66 0 0 0 10.12 0q.21.18.42.33a10.84 10.84 0 0 1-1.71.84a12.41 12.41 0 0 0 1.08 1.78a16.44 16.44 0 0 0 5.06-2.59a17.22 17.22 0 0 0-3-11.59a16.09 16.09 0 0 0-4.09-1.35zM8.68 14.81a1.94 1.94 0 0 1-1.8-2a1.93 1.93 0 0 1 1.8-2a1.93 1.93 0 0 1 1.8 2a1.93 1.93 0 0 1-1.8 2zm6.64 0a1.94 1.94 0 0 1-1.8-2a1.93 1.93 0 0 1 1.8-2a1.92 1.92 0 0 1 1.8 2a1.92 1.92 0 0 1-1.8 2z"></path>
+      </svg>
+    </a>
+    <a href="https://github.com/Kuraaaz" target="_blank" class="github-button">
+      <svg class="github-icon" xmlns="http://www.w3.org/2000/svg" width="3em" height="3em" viewBox="2.05 2 19.95 19.46">
+        <!-- Utiliser les mêmes filtres que ceux du Discord Button -->
+        <defs>
+          <filter id="red-glow" x="-50%" y="-50%" width="200%" height="200%">
+            <feFlood flood-color="rgba(150, 0, 24, 1)" result="red" />
+            <feComposite in="red" in2="SourceAlpha" operator="in" result="composite1" />
+            <feGaussianBlur in="composite1" stdDeviation="3.5" result="blurred" />
+            <feMerge>
+              <feMergeNode in="blurred" />
+              <feMergeNode in="SourceGraphic" />
+            </feMerge>
+          </filter>
+    
+          <filter id="white-glow" x="-50%" y="-50%" width="200%" height="200%">
+            <feFlood flood-color="rgba(255, 255, 255, 1)" result="white" />
+            <feComposite in="white" in2="SourceAlpha" operator="in" result="composite2" />
+            <feGaussianBlur in="composite2" stdDeviation="5" result="blurred" />
+            <feMerge>
+              <feMergeNode in="blurred" />
+              <feMergeNode in="SourceGraphic" />
+            </feMerge>
+          </filter>
+        </defs>
+        <path fill="currentColor" d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974c0 4.406 2.857 8.145 6.821 9.465c.499.09.679-.217.679-.481c0-.237-.008-.865-.011-1.696c-2.775.602-3.361-1.338-3.361-1.338c-.452-1.152-1.107-1.459-1.107-1.459c-.905-.619.069-.605.069-.605c1.002.07 1.527 1.028 1.527 1.028c.89 1.524 2.336 1.084 2.902.829c.091-.645.351-1.085.635-1.334c-2.214-.251-4.542-1.107-4.542-4.93c0-1.087.389-1.979 1.024-2.675c-.101-.253-.446-1.268.099-2.64c0 0 .837-.269 2.742 1.021a9.582 9.582 0 0 1 2.496-.336a9.554 9.554 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021c.545 1.372.203 2.387.099 2.64c.64.696 1.024 1.587 1.024 2.675c0 3.833-2.33 4.675-4.552 4.922c.355.308.675.916.675 1.846c0 1.334-.012 2.41-.012 2.737c0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974C22 6.465 17.535 2 12.026 2z" clip-rule="evenodd"></path>
+      </svg>
+    </a>
+    <!-- PayPal Button -->
+    <a href="https://www.paypal.me/Kuraazz" target="_blank" class="paypal-button">
+      <svg class="paypal-icon" xmlns="http://www.w3.org/2000/svg" width="3em" height="3em" viewBox="4.36 2.99 15.27 18.02">
+        <defs>
+          <!-- Filtre pour la lueur rouge par défaut -->
+          <filter id="red-glow" x="-50%" y="-50%" width="200%" height="200%">
+            <feFlood flood-color="rgba(150, 0, 24, 1)" result="red" />
+            <feComposite in="red" in2="SourceAlpha" operator="in" result="composite1" />
+            <feGaussianBlur in="composite1" stdDeviation="3.5" result="blurred" />
+            <feMerge>
+              <feMergeNode in="blurred" />
+              <feMergeNode in="SourceGraphic" />
+            </feMerge>
+          </filter>
+        
+          <!-- Filtre pour la lueur blanche au survol -->
+          <filter id="white-glow" x="-50%" y="-50%" width="200%" height="200%">
+            <feFlood flood-color="rgba(255, 255, 255, 1)" result="white" />
+            <feComposite in="white" in2="SourceAlpha" operator="in" result="composite2" />
+            <feGaussianBlur in="composite2" stdDeviation="5" result="blurred" />
+            <feMerge>
+              <feMergeNode in="blurred" />
+              <feMergeNode in="SourceGraphic" />
+            </feMerge>
+          </filter>
+        </defs>        
+        <path fill="currentColor" d="M19.554 9.488c.121.563.106 1.246-.04 2.051c-.582 2.978-2.477 4.466-5.683 4.466h-.442a.666.666 0 0 0-.444.166a.72.72 0 0 0-.239.427l-.041.189l-.553 3.479l-.021.151a.706.706 0 0 1-.247.426a.666.666 0 0 1-.447.166H8.874a.395.395 0 0 1-.331-.15a.457.457 0 0 1-.09-.363c.061-.373.148-.938.267-1.689c.117-.75.206-1.314.267-1.689s.15-.938.272-1.685c.121-.748.212-1.31.271-1.685c.033-.248.179-.371.433-.371h1.316c.893.013 1.682-.057 2.375-.211c1.172-.262 2.134-.744 2.886-1.449c.685-.637 1.203-1.462 1.56-2.473c.162-.47.277-.917.352-1.338c.006-.041.014-.066.025-.074c.008-.011.022-.014.035-.011a.378.378 0 0 1 .062.035c.524.398.854.941.98 1.632zm-1.728-2.836c0 .717-.154 1.508-.465 2.374c-.537 1.562-1.547 2.618-3.037 3.168c-.758.269-1.602.408-2.535.425c0 .006-.301.007-.904.007l-.903-.007c-.672 0-1.067.32-1.187.964c-.013.053-.298 1.83-.855 5.329c-.008.066-.048.102-.121.102H4.854a.473.473 0 0 1-.369-.165a.469.469 0 0 1-.115-.39L6.702 3.664a.784.784 0 0 1 .276-.483a.785.785 0 0 1 .519-.19h6.014c.228 0 .555.044.979.131c.428.084.801.194 1.123.321c.718.274 1.266.688 1.645 1.237c.379.552.568 1.207.568 1.972z"></path>
+      </svg>
+    </a>
+    <!-- Instagram Button -->
+    <a href="https://www.instagram.com/matc.33" target="_blank" class="instagram-button">
+      <svg class="instagram-icon" xmlns="http://www.w3.org/2000/svg" width="3em" height="3em" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M20.947 8.305a6.53 6.53 0 0 0-.419-2.216a4.61 4.61 0 0 0-2.633-2.633a6.606 6.606 0 0 0-2.186-.42c-.962-.043-1.267-.055-3.709-.055s-2.755 0-3.71.055a6.606 6.606 0 0 0-2.185.42a4.607 4.607 0 0 0-2.633 2.633a6.554 6.554 0 0 0-.419 2.185c-.043.963-.056 1.268-.056 3.71s0 2.754.056 3.71c.015.748.156 1.486.419 2.187a4.61 4.61 0 0 0 2.634 2.632a6.584 6.584 0 0 0 2.185.45c.963.043 1.268.056 3.71.056s2.755 0 3.71-.056a6.59 6.59 0 0 0 2.186-.419a4.615 4.615 0 0 0 2.633-2.633c.263-.7.404-1.438.419-2.187c.043-.962.056-1.267.056-3.71c-.002-2.442-.002-2.752-.058-3.709zm-8.953 8.297c-2.554 0-4.623-2.069-4.623-4.623s2.069-4.623 4.623-4.623a4.623 4.623 0 0 1 0 9.246zm4.807-8.339a1.077 1.077 0 0 1-1.078-1.078a1.077 1.077 0 1 1 2.155 0c0 .596-.482 1.078-1.077 1.078z"></path>
+      </svg>
+    </a>
   </section>
   
   <section id="about">
     <h2>À propos de moi</h2>
     <p>Bonjour, je m'appelle Matteo, j'ai 15 ans, et ma passion pour l'informatique et le développement web a commencé dès l'âge de 12 ans. Depuis mes débuts, j'ai toujours été fasciné par la manière dont quelques lignes de code pouvaient transformer des idées en projets concrets et interactifs. Au fil du temps, cette passion s'est enrichie et diversifiée, me poussant à explorer sans cesse de nouveaux horizons dans l'univers du développement.</p>
-    <p>Au commencement, j'ai plongé dans le monde du web en apprenant les bases du HTML et du CSS pour créer mes premiers sites statiques. Très vite, mon envie d'aller plus loin m'a conduit à découvrir JavaScript, qui m'a permis de rendre mes créations plus dynamiques et interactives. Chaque ligne de code écrite était une nouvelle aventure, un pas de plus vers la compréhension de cet univers fascinant.</p>
   </section>
   
   <section id="skills">
-    <h2>Compétences</h2>
-    <div class="skills-list">
-      <div class="skill"><i class="fas fa-code"></i>JavaScript (Node.js, React)</div>
-      <div class="skill"><i class="fas fa-database"></i>PHP & MySQL</div>
-      <div class="skill"><i class="fas fa-python"></i>Python</div>
-      <div class="skill"><i class="fas fa-cplusplus"></i>C++</div>
-      <div class="skill"><i class="fas fa-html5"></i>HTML/CSS : Pour structurer et styliser mes pages web.</div>
-      <div class="skill"><i class="fas fa-js"></i>JavaScript : Pour ajouter de l'interactivité et dynamiser les interfaces.</div>
-      <div class="skill"><i class="fas fa-react"></i>Frameworks modernes : Comme React pour construire des interfaces utilisateur réactives et modernes.</div>
-      <div class="skill"><i class="fas fa-node-js"></i>Node.js et Express : Pour créer des serveurs performants et gérer les requêtes.</div>
-      <div class="skill"><i class="fas fa-python"></i>Python et Django : Pour développer des applications web robustes et sécurisées.</div>
-      <div class="skill"><i class="fas fa-php"></i>PHP : Une autre pierre angulaire pour le développement web, notamment pour des projets plus traditionnels.</div>
-      <div class="skill"><i class="fas fa-database"></i>SQL/MySQL et NoSQL : Pour concevoir et gérer efficacement les données au sein de mes applications.</div>
+    <h2>Mes technologies</h2>
+  
+    <h3>Mes langages</h3>
+    <div class="skills-list" id="langages-list">
+      <div class="skill" data-tech="JavaScript">・  JavaScript (Front-end / Back-end)</div>
+      <div class="skill" data-tech="Python">・  Python</div>
+      <div class="skill" data-tech="C++">・  C++</div>
+      <div class="skill" data-tech="HTML">・  HTML</div>
+      <div class="skill" data-tech="CSS">・  CSS</div>
+      <div class="skill" data-tech="PHP">・  PHP</div>
+      <div class="skill" data-tech="MySQL">・  MySQL</div>
+    </div>
+  
+    <h3>Frameworks modernes</h3>
+    <div class="skills-list" id="frameworks-list">
+      <div class="skill" data-tech="Node.js">・  Node.js</div>
+      <div class="skill" data-tech="React.js">・  React.js</div>
+      <div class="skill" data-tech="Express">・  Express</div>
+    </div>
+  
+    <h3>Mes outils</h3>
+    <div class="skills-list" id="outils-list">
+      <div class="skill" data-tech="Git">・  Git</div>
+      <div class="skill" data-tech="GitHub">・  GitHub</div>
+      <div class="skill" data-tech="Linux">・  Linux &amp; Serveurs</div>
+      <div class="skill" data-tech="Cloud">・  Cloud Computing (AWS, GCP)</div>
+      <div class="skill" data-tech="Visual Studio Code">・  Visual Studio Code</div>
+      <div class="skill" data-tech="HeidiSQL">・  HeidiSQL</div>
     </div>
   </section>
+  
+
   
   <section id="projects">
     <h2>Projets</h2>
@@ -62,23 +177,65 @@
       <div class="experience-item">Site web interactif</div>
       <div class="experience-item">Bot Discord avancé</div>
       <div class="experience-item">Application mobile en React Native</div>
+      <div class="experience-item">APIs & Web Services</div>
     </div>
-  </section>
-  
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Me contacter via Discord : Kura#1234</p>
   </section>
   
   <section id="future">
     <h2>Un Regard Vers l'Avenir</h2>
-    <p>Être jeune développeur aujourd'hui signifie évoluer dans un environnement en perpétuelle mutation, où l'innovation et l'apprentissage constant sont essentiels. Je suis convaincu que chaque nouveau projet, chaque ligne de code écrite, est une opportunité de grandir et de contribuer, même modestement, à l'avancement technologique. Je m'implique également dans des projets open source et des communautés de développeurs, où le partage et la collaboration permettent de repousser les limites de ce que nous pouvons réaliser ensemble.</p>
-    <p>En somme, mon parcours, bien que jeune, est animé par une curiosité insatiable et une détermination à explorer toutes les facettes du développement web. Mon rêve est de continuer à apprendre, d'expérimenter avec les technologies émergentes, et, un jour, de participer activement à des projets qui transformeront notre manière de vivre et d'interagir avec le monde numérique.</p>
-    <p>Merci de prendre le temps de découvrir mon univers et ma passion pour le développement. L'aventure ne fait que commencer, et je suis impatient de voir où le code me mènera demain.</p>
+    <p>Mon projet est de devenir développeur full stack et en faire ma profession. J'aimerais travailler sur des projets aussi bien côté front-end que back-end, et aussi me spécialiser dans le développement d'applications, principalement avec des langages comme C++. Mon objectif est d'acquérir des compétences solides dans ces domaines pour pouvoir créer des applications complètes et fonctionnelles.</p>
   </section>
   
   <footer>
     <p>© 2025 Kura. Tous droits réservés.</p>
   </footer>
+
+  <script src="title.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+    // Mapping des technologies vers leurs URL de logos
+    const techLogos = {
+        "JavaScript": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+        "Python": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+        "C++": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg",
+        "HTML": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+        "CSS": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+        "Node.js": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+        "React.js": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+        "Express": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
+        "PHP": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg",
+        "MySQL": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
+        "Git": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
+        "GitHub": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
+        "Linux": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg",
+        "Visual Studio Code": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg",
+        "Cloud": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/512px-Amazon_Web_Services_Logo.svg.png?20170912170050",
+        "HeidiSQL": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/HeidiSQL_logo_image.png/600px-HeidiSQL_logo_image.png?20200307114522"
+    };
+
+    // Pour chaque élément de compétence
+    document.querySelectorAll('.skill').forEach(skillEl => {
+        const techData = skillEl.getAttribute('data-tech');
+        if (!techData) return;
+
+        // Conserver le texte original
+        const originalText = skillEl.textContent;
+        let logosHTML = "";
+
+        // Sépare les technologies par virgule (si besoin)
+        const techNames = techData.split(',').map(t => t.trim());
+        techNames.forEach(name => {
+            if (techLogos[name]) {
+                logosHTML += `<img src="${techLogos[name]}" alt="${name}" class="tech-logo"> `;
+            } else {
+                console.warn(`Logo manquant pour: ${name}`);
+            }
+        });
+
+        // On met à jour le contenu HTML de l'élément (sans séparateur automatique)
+        skillEl.innerHTML = `${logosHTML}${originalText}`;
+    });
+});
+    </script>    
 </body>
 </html>

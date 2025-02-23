@@ -1,11 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap');
 
+/* Réinitialisation de base */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+/* Corps de page */
 body {
   font-family: 'Roboto', sans-serif;
   background: linear-gradient(135deg, #121212 0%, #1e1e1e 100%);
@@ -13,18 +15,20 @@ body {
   text-align: center;
   line-height: 1.6;
   transition: background 0.3s;
+  padding: 10px;
 }
 
 body:hover {
   background: linear-gradient(135deg, #1e1e1e 0%, #121212 100%);
 }
 
+/* Header */
 header {
-  background: url('assets/bannerrr.png') no-repeat center center/cover;
-  padding: 100px 20px;
+  background: url('assets/banerrr.png') no-repeat center center/cover;
+  padding: 80px 20px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
   position: relative;
-  color: #46c406;
+  color: #00FFFF;
   overflow: hidden;
 }
 
@@ -39,51 +43,155 @@ header::after {
   z-index: 1;
 }
 
-h1 {
-  font-size: 4.5em;
-  margin: 0;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-  position: relative;
-  z-index: 2;
-  animation: fadeInDown 1s ease-in-out;
-}
-
-header p {
-  font-size: 1.5em;
-  margin-top: 10px;
-  z-index: 2;
-  position: relative;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
-  animation: fadeInUp 1s ease-in-out;
-}
-
-nav {
-  margin-top: 20px;
-}
-
-nav ul {
-  list-style: none;
-  padding: 0;
+/* Section Discord Info */
+#discord-info {
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   justify-content: center;
-  gap: 20px;
+  margin-top: 20px;
+  background: rgba(255, 255, 255, 0.07);
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.05);
+  transition: transform 0.3s, background-color 0.3s;
 }
 
-nav a {
-  color: #f0f0f0;
-  text-decoration: none;
+#discord-info:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-5px);
+}
+
+.discord-avatar-container {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  border: 2px solid rgba(27, 27, 27, 0.15);
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.discord-avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.discord-avatar:hover {
+  transform: scale(1.1);
+}
+
+.discord-status {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  z-index: 2;
+}
+
+.discord-status.dnd {
+  background-color: #ff0000;
+}
+
+.discord-status.offline {
+  background-color: transparent;
+  border: 2px solid #808080;
+}
+
+.discord-status.online {
+  background-color: #00ff00;
+}
+
+.discord-status.idle {
+  background-color: #faa61a;
+}
+
+.discord-details {
+  flex: 1;
+  text-align: left;
+  color: rgba(255, 255, 255, 0.7);
+  padding: 10px;
+}
+
+.discord-activity {
+  font-size: 1.2em;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Activité Discord */
+.activity {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  background: rgba(32, 34, 37, 0.3);
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-top: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+  transition: background 0.2s ease;
+  overflow: visible;
+}
+
+.activity:hover {
+  background: rgba(32, 34, 37, 0.4);
+}
+
+.activity-image {
+  width: 48px;
+  height: 48px;
+  border-radius: 6px;
+  margin-right: 16px;
+  object-fit: cover;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.activity-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  white-space: pre-wrap;
+  word-break: break-word;
+  overflow: visible;
+  font-family: 'Whitney', sans-serif;
+}
+
+.activity-name {
+  font-size: 15px;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.activity-state,
+.activity-extra,
+.activity-elapsed {
+  font-size: 13px;
+  margin-top: 4px;
+  line-height: 1.3;
+  white-space: pre-wrap;
+}
+
+.activity-state,
+.activity-extra {
+  color: #b9bbbe;
+}
+
+.activity-elapsed {
   font-weight: bold;
-  display: block;
-  padding: 10px 20px;
-  transition: color 0.3s ease;
+  color: #00FFFF;
 }
 
-nav a:hover {
-  color: #fd712b;
-}
-
+/* Main et Section */
 main {
-  max-width: 900px;
+  max-width: 90%;
   margin: 40px auto;
   padding: 20px;
   background-color: #1e1e1e;
@@ -104,7 +212,8 @@ section {
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
   transition: background-color 0.3s, transform 0.3s;
-  width: 800px;
+  width: 90%;
+  max-width: 800px;
 }
 
 section:hover {
@@ -112,8 +221,58 @@ section:hover {
   transform: translateY(-5px);
 }
 
+h1 {
+  font-size: 4.5em;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  position: relative;
+  z-index: 2;
+  animation: fadeInDown 1s ease-in-out;
+}
+.titre-points {
+  position: relative;
+  display: inline-block;
+  font-size: 4.5em;
+  font-weight: bold;
+}
+
+.point {
+  position: absolute;
+  background-color: #fff; /* Points blancs */
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0.8;
+  animation: animation-points 2s infinite;
+}
+
+@keyframes animation-points {
+  0% { 
+    transform: scale(0);
+    opacity: 1;
+  }
+  50% { 
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  100% { 
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+
+header p {
+  font-size: 1.5em;
+  margin-top: 10px;
+  position: relative;
+  font-weight: bold;
+  font-style: italic;
+  z-index: 2;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+  animation: fadeInUp 1s ease-in-out;
+}
+
 h2 {
-  color: #46c406;
+  color: #00FFFF;
   margin-bottom: 15px;
   font-size: 2.5em;
   position: relative;
@@ -126,43 +285,62 @@ h2::after {
   display: block;
   height: 2px;
   width: 50px;
-  background: #46c406;
+  background: #ff0000;
   margin: 10px auto;
   border-radius: 5px;
 }
 
+h3 {
+  color: #00FFFF;
+  margin-bottom: 7.5px;
+  font-size: 1.5em;
+  position: relative;
+  animation: fadeInLeft 1s ease-in-out;
+  font-family: 'Bruno Ace SC', sans-serif;
+}
+
+/* Paragraphes dans about et contact */
 .about p, .contact p {
   font-size: 1.2em;
   line-height: 1.8;
 }
 
+/* Skills */
 .skills-list {
   display: flex;
   flex-wrap: wrap;
+  gap: 12px;
   justify-content: center;
-  margin: 10px 0;
 }
 
 .skill {
-  background-color: #46c406;
-  color: black;
-  padding: 10px 20px;
-  border-radius: 5px;
-  margin: 5px;
-  transition: transform 0.3s, background-color 0.3s;
   display: flex;
   align-items: center;
-}
-
-.skill i {
-  margin-right: 10px;
+  font-size: 16px;
+  padding: 8px 12px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  transition: transform 0.3s, background 0.3s;
+  white-space: nowrap;
 }
 
 .skill:hover {
-  transform: scale(1.1);
-  background-color: #A44CD0;
+  transform: scale(1.05);
+  background: rgba(255, 255, 255, 0.15);
 }
 
+.tech-logo {
+  width: 28px;
+  height: 28px;
+  margin-right: 8px;
+  vertical-align: middle;
+  transition: transform 0.3s;
+}
+
+.tech-logo:hover {
+  transform: scale(1.1);
+}
+/* Expérience */
 .experience-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -172,7 +350,7 @@ h2::after {
 }
 
 .experience-item {
-  background-color: #3E3E3E;
+  background-color: #960018;
   padding: 15px;
   border-radius: 5px;
   transition: transform 0.3s, background-color 0.3s;
@@ -180,16 +358,18 @@ h2::after {
 
 .experience-item:hover {
   transform: scale(1.05);
-  background-color: #4E4E4E;
+  background-color: #6e0315;
 }
 
+/* Footer */
 footer {
   margin-top: 40px;
   font-size: 0.9em;
   color: #888;
   padding: 10px 0;
   border-top: 1px solid #444;
-  width: 800px;
+  width: 90%;
+  max-width: 800px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -199,16 +379,17 @@ footer p {
 }
 
 a {
-  color: #46c406;
+  color: #00FFFF;
   text-decoration: none;
   transition: color 0.3s;
   font-family: 'Bruno Ace SC', sans-serif;
 }
 
 a:hover {
-  color: #46c406;
+  color: #00FFFF;
 }
 
+/* Discord Profile */
 .discord-profile {
   margin: 20px 0;
 }
@@ -225,6 +406,7 @@ a:hover {
   transform: scale(1.05);
 }
 
+/* Animations */
 @keyframes fadeInDown {
   from {
     opacity: 0;
@@ -258,138 +440,137 @@ a:hover {
   }
 }
 
-.menu-toggle {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  display: flex;
-  flex-direction: column;
-  cursor: pointer;
-  z-index: 3;
-}
-
-.menu-toggle .bar {
-  width: 25px;
-  height: 3px;
-  background-color: #f0f0f0;
-  margin: 4px 0;
-  transition: 0.4s;
-}
-
-.menu-toggle.active .bar:nth-child(1) {
-  transform: rotate(-45deg) translate(-5px, 6px);
-}
-
-.menu-toggle.active .bar:nth-child(2) {
-  opacity: 0;
-}
-
-.menu-toggle.active .bar:nth-child(3) {
-  transform: rotate(45deg) translate(-5px, -6px);
-}
-
-.menu {
-  display: none;
+/* Conteneurs latéraux pour les colonnes */
+.side-columns {
   position: fixed;
-  top: 0;
-  right: 0;
-  width: 500px;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  padding: 20px;
-  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
-  transition: transform 0.3s ease-in-out;
-  transform: translateX(100%);
-  z-index: 2;
+  top: 38%;
+  bottom: 0;
+  width: 50%;       /* Augmenté pour contenir plusieurs colonnes */
+  pointer-events: none;
+  z-index: 0;       /* En arrière-plan par rapport aux contenus principaux */
+  display: flex;
+  flex-wrap: wrap;  /* Permet d’avoir plusieurs colonnes sur plusieurs lignes */
 }
 
-.menu.active {
-  display: block;
-  transform: translateX(0);
+/* Positionnement distinct pour chaque côté */
+#side-columns-left {
+  left: 3%;        /* Par exemple, 10% depuis le bord gauche */
+  align-items: flex-start;
+  justify-content: left;
 }
 
-.menu ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+#side-columns-right {
+  right: 3%;       /* 10% depuis le bord droit */
+  align-items: flex-start;
+  justify-content: right;
+}
+
+/* Style de chaque colonne de code */
+.code-column {
+  width: 3.5vh;      /* Largeur fixe pour chaque colonne */
   display: flex;
   flex-direction: column;
+  gap: 2px;
 }
 
-.menu ul li {
-  margin: 20px 0;
-}
-
-.menu ul li a {
-  color: #f0f0f0;
-  text-decoration: none;
-  font-weight: bold;
+/* Style pour chaque caractère de la colonne */
+.code-column span {
   display: block;
-  padding: 15px 20px;
-  transition: color 0.3s ease, transform 0.3s ease;
-  font-family: 'Bruno Ace SC', sans-serif;
-  position: relative;
+  font-size: 16px;
+  color: #00FF00;
+  opacity: 0;
+  /* Animation d’apparition puis disparition */
+  animation: charFade 1s ease-in-out forwards;
 }
 
-.menu ul li a::before {
-  content: '-';
-  margin-right: 10px;
+/* Animation pour chaque caractère */
+@keyframes charFade {
+  0% { opacity: 0; transform: translateY(-5px); }
+  20% { opacity: 1; transform: translateY(0); }
+  80% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(5px); }
 }
 
-.menu ul li a:hover {
-  color: #46c406;
-  transform: scale(1.1);
-}
-
-.menu ul li a:hover::after {
-  content: '';
-  display: block;
-  width: calc(100% - 30px);
-  height: 2px;
-  background-color: #46c406;
-  position: absolute;
-  bottom: 0;
-  left: 15px;
-}
-
-.separator {
-  height: 2px;
-  background: linear-gradient(135deg, #52659f, #6a7fbf);
-  margin: 20px 0;
-}
-
-.skills-container {
+.discord-username-banner {
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  padding: 20px;
-  background: #1a1a1a;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  max-width: 700px;
-  margin: 0 auto;
+  align-items: center;
+  justify-content: space-between; /* Ajouté pour espacer les éléments */
 }
 
-.skill-card {
-  background: linear-gradient(135deg, #52659f, #6a7fbf);
-  color: #f0f0f0;
-  padding: 20px;
+.discord-username {
+  margin-right: 10px;
+  font-size: 1.5em;
+  font-weight: bold;
+  font-style: italic;
   margin: 10px 0;
-  border-radius: 8px;
-  transition: transform 0.3s ease, background-color 0.3s ease;
-  position: relative;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: calc(100% - 40px);
-  max-width: 100%;
-  box-sizing: border-box;
+  transition: color 0.3s;
+  color: #00FFFF; /* Changement de couleur */
 }
 
-#about,
-#skills,
-#projects,
-#contact,
-#future {
-  width: 800px;
-  margin-left: auto;
-  margin-right: auto;
+.discord-banner {
+  display: inline-block;
+  vertical-align: middle;
+  width: 10vh; /* Ajustez la taille selon vos besoins */
+  height: auto;
+  margin-left: 10px; /* Ajouté pour espacer le logo du pseudo */
+}
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 3em;
+  }
+  header {
+    padding: 60px 10px;
+  }
+  .discord-avatar-container {
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+  }
+  .discord-activity {
+    font-size: 1em;
+  }
+  .activity-image {
+    width: 40px;
+    height: 40px;
+    margin-right: 12px;
+  }
+  .activity-name {
+    font-size: 14px;
+  }
+  .activity-state, .activity-extra, .activity-elapsed {
+    font-size: 12px;
+  }
+  nav a {
+    padding: 8px 12px;
+  }
+  section {
+    width: 95%;
+    padding: 15px;
+  }
+  main {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2.5em;
+  }
+  header {
+    padding: 40px 5px;
+  }
+  .discord-avatar-container {
+    width: 60px;
+    height: 60px;
+    margin-right: 5px;
+  }
+  .discord-activity {
+    font-size: 0.9em;
+  }
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
 }
