@@ -21,7 +21,7 @@ body {
 body:hover {
   background: linear-gradient(135deg, #1e1e1e 0%, #121212 100%);
 }
-#first img {
+.typing-svg {
   max-width: 100%;
   height: auto;
   display: block;
@@ -30,7 +30,7 @@ body:hover {
 
 /* Responsive Media Queries */
 @media (max-width: 768px) {
-  #first img {
+  .typing-svg {
     width: 100%;
   }
 }
