@@ -21,6 +21,19 @@ body {
 body:hover {
   background: linear-gradient(135deg, #1e1e1e 0%, #121212 100%);
 }
+#first img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+  #first img {
+    width: 100%;
+  }
+}
 
 /* Header */
 header {
